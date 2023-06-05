@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array max</title>
+</head>
+<body>
+
+    <script>
+
+        let a=[10,20,30,40,50];
+        let sum=0;
+
+        let max=a[0];
+
+        for(let i=0; i<a.length; i++){
+            document.write('<br> Element is '+a[i]);
+            sum += a[i];
+
+             if(a[i]>max){
+            max=a[i];
+            }  
+        }
+
+        document.write('<br><br> Sum of Element are '+sum);
+        document.write('<br><br> Max is '+max);
+        
+    </script>
+    
+</body>
+</html>

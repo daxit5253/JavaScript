@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY ITERATION</title>
+</head>
+<body>
+
+
+    <script>
+
+
+        document.write('<b><br> ----- INDEXOF -----</b><br><br>');
+
+        let a=['10','78','57','36','45','101','81','4','92','25','66','12','40','51',];
+        document.write(''+a+'<br>');
+
+        let b=a.indexOf('51');
+        document.write('51 index is = '+b);
+
+
+        document.write('<b><br><br> ----- FOREACH -----</b><br><br>');
+
+        a.forEach(myArray);
+
+        function myArray(val, i){
+        document.write(i+' Array is '+val+'<br>');
+        
+        }
+
+
+        document.write('<b><br> ----- FOREACH SORT -----</b><br><br>');
+
+        a.sort(function(a,b){
+            return a-b;
+        });
+        for (let i =0; i < a.length; i++) {
+        }
+                    a.forEach(myArray);
+
+        function myArray(p, q){
+        document.write(q+' Array is '+p+'<br>');
+        }    
+        
+        
+        document.write('<b><br> ----- MAP -----</b><br><br>');
+
+        a=[2,3,0,5,9,7,50];
+        b=a.map(function(i){
+            return i**2;
+        });
+        let txt="";
+
+        b.forEach(function(val){
+            txt+=val+"<br>";
+        });
+        document.write('Map is <br>'+txt);
+        
+
+        document.write('<b><br> ----- FILTER -----</b><br><br>');
+
+        // x=prompt("Enter a Value");
+
+        // mult=x**2;
+        // document.write('ANS. IS  ' +mult);
+
+        c=a.filter(function(i){
+            return i%2;
+        });
+        c.forEach(function(v){
+            document.write(' ODD NUMBER IS '+v+"<br>");
+        });
+
+
+        document.write('<b><br> ----- REDUCE -----</b><br><br>');
+
+        d=a.reduce(function(t){
+            return t;
+        });
+        document.write('First Value is ' +d);
+        
+
+        document.write('<b><br><br> ----- REDUCE RIGHT -----</b><br><br>');
+
+        d=a.reduceRight(function(t){
+            return t;
+        });
+        document.write('Right Value is ' +d);
+
+
+        document.write('<b><br><br> ----- INCLUDES -----</b><br><br>');
+
+        if(a.includes(2)){
+            document.write('Value Found');
+        }else{
+            document.write('No Value Found');
+        }
+
+        
+
+
+        
+
+
+    </script>
+
+</body>
+</html>

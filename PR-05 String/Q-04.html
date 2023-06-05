@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-04</title>
+</head>
+<body>
+
+    <script>
+
+        // 4) Check character is vowel or consonant If user enter except a to z then display Invalid character.
+
+        a=prompt("Enter a Character");
+
+        if((a>='a' && a<='z') || (a>='A' && a<='Z')){
+
+            if(a=='a'|| a=='e' || a=='i' || a=='o' || a=='u' || a=='A' || a=='E' || a=='I' || a=='O' || a=='U'){
+                document.write("This character is <b>Vowel</b> ");
+            }
+            else{
+                document.write("This character is <b>Consonant</b> 0");
+            }
+        }
+        else{
+            document.write("This value is <b>Not Valid</b> ");
+        }
+    </script>
+    
+</body>
+</html>

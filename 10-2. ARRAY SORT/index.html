@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY SORT</title>
+</head>
+<body>
+
+    <script>
+
+        document.write('<b><br>-------  ARRAY SORT  -------</b><br>');
+
+        let a=['h','k','a','d','f','c','g','i','j','e','b'];
+                     
+
+        for(i=0;i<a.length;i++){
+            document.write('<br>'+a[i]);
+            
+        }
+
+        document.write('<b><br><br>-------  ARRAY REVERSE  -------</b><br>');
+
+        let c=['h','k','a','d','f','c','g','i','j','e','b'];
+        a.sort();
+        a.reverse()
+
+        for(i=0;i<a.length;i++){
+            document.write('<br>'+a[i]);
+            
+        }
+
+        document.write('<b><br><br>-------  ARRAY SORT NUMBER -------</b><br>');
+
+        let b=['100','9','58','29','90','2','45','68','22'];
+        b.sort(function(a,b){
+            return a-b;
+        });
+
+        for(i=0;i<b.length;i++){
+            document.write('<br>'+b[i]);
+            
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

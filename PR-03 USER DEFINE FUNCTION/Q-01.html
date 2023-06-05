@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR-03</title>
+</head>
+
+<style>
+    button{
+        background-color: white;
+        padding: 10px;
+        width: 180px;
+        margin-left: 30px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: 5px 2px 15px grey;
+    }
+
+    button:hover{
+        background-color: rgb(198, 195, 195);
+    }
+
+    h2{
+        margin-left: 30px;
+    }
+
+    .Q{
+        margin-top: 80px;
+    }
+
+    .d-flex{
+        display: flex;
+        align-items: center;
+    }
+</style>
+<body>
+
+    <!-- 1. -->
+
+    <h2> 1. WAP to calculate CALC  Using Add, Sub, Mul, Div function  </h2>
+
+    <script src="Q-01.js"></script>
+
+    <button type="button" onclick="calc()">All</button>
+    <button type="button" onclick="add()">Addition</button>
+    <button type="button" onclick="sub()">Subtraction</button>
+    <button type="button" onclick="mult()">Multiple</button>
+    <button type="button" onclick="div()">Division</button>
+
+    <!-- 2. -->
+
+    <h2 class="Q"> 2. WAP to find Area using rectanlge, Triangle, circle functions. </h2>
+
+    <script src="Q-02.js"></script>
+
+    <button type="button" onclick="rect()">Rectangle</button>
+    <button type="button" onclick="tri()">Triangle</button>
+    <button type="button" onclick="cir()">Circle</button>
+
+    <!-- 3. -->
+
+    <h2 class="Q">3. WAP to find converter</h2>
+
+    <script src="Q-03.js"></script>
+
+        <div class="d-flex">
+            <h3 style="padding-top: 15px; margin-left: 85px; margin-top: 20px;">1. for meter to foot</h3>
+            <button type="button" onclick="meter()" style="margin-left: 99px;">Type Meter</button>
+        </div>
+
+        <div class="d-flex">
+            <h3 style="padding-top: 15px; margin-left: 85px; margin-top: 20px;">2. for Celsius to Fahrenheit</h3>
+            <button type="button" onclick="cels()">Type Celsious</button>
+        </div>
+
+        <div class="d-flex">
+            <h3 style="padding-top: 15px; margin-left: 85px; margin-top: 20px;"> 3. for Dollar to Rupees</h3>
+            <button type="button" onclick="doll()"" style="margin-left: 65px;">Type Dollor</button>
+        </div>
+
+ 
+</body>
+</html>

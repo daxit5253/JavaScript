@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // Legnth.
+
+        let str="Hi Hello How are You?"
+        document.write("Total length is " +str.length+ "<br>");
+
+        // Slice
+
+        let str2=str.slice(3);
+        let str3=str.slice(3,8);
+        let str4=str.slice(-21,-12);
+
+
+        document.write("Starting Point is " +str2+ "<br>");
+        document.write("Slice is " +str3+ "<br>");
+        document.write("Slice nagetive is " +str4+ "<br>");
+
+        // Uppercase
+
+        let str5=str.slice(3,20).toUpperCase();
+        document.write("Uppercase is " +str5+ "<br>");
+
+        // Lowercase
+
+        let str6=str.slice(3,20);
+        document.write("Lowercase is " +str6.toLowerCase()+ "<br>");
+
+        // Substr
+
+        let str7=str.substr(3,10);
+        document.write(""+str7+"<br>");
+
+        // Replace
+
+        let p="My Name is Daxit Barvaliya"
+        let q= p.replace(/Barvaliya/gi, "Patel");
+
+        document.write("Replace is " +q+"<br>");
+
+        // Concat
+
+        let str8="How are You?"
+        let str9="I Am Fine"
+
+        let str10=str8.concat("&nbsp"+ str9);
+        document.write("Merge is  " +str10+"<br>");
+
+    </script>
+</body>
+</html>

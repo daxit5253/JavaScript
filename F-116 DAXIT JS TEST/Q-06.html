@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-06</title>
+</head>
+<body>
+
+    <script>
+
+        a=prompt("Enter your Gujarati marks ");
+        b=prompt("Enter your English marks ");
+        c=prompt("Enter your Science marks ");
+        d=prompt("Enter your Maths marks ");
+
+        total=parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d);
+        document.write("Your Total Marks is "+total+ "<br>");
+
+        marks=total/4;
+        document.write("Your Percentages is "+marks+ "<br>");
+
+
+        if(marks>=80){
+                document.write("You are Achieved Grade A+ ");
+        }
+
+        else if(marks>=70 && marks<80){
+                document.write("You are Achieved Grade A ");
+        }
+
+        else if(marks>=60 && marks<70){
+                document.write("You are Achieved Grade B ");
+        }
+        
+        else if(marks>=50 && marks<60){
+                document.write("You are Achieved Grade C ");
+        }
+        
+        else if(marks>=40 && marks<50){
+                document.write("You are Achieved Grade D ");
+        }
+
+        else{
+                document.write("Fail");
+        }
+
+    </script>
+    
+</body>
+</html>

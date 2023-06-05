@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        //
+
+    document.write("<b>---------- STRING TO ARRAY ----------</b><br><br>");
+
+        let a="Hi Hello How Are You?";
+        let b=a.split(" ");
+        document.write("Array 2 Element is = "+b[2]);
+        document.write('<br>A is '+a);
+
+        //
+        
+    document.write("<br><br><b>---------- ARRAY TO STRING ----------</b><br>");
+
+        let c=b.toString();
+        document.write('<br>Array to String Convert = '+a);
+
+        //
+
+    document.write("<br><br><br><br><b>ARRAY METHOD </b><br>");
+
+        // 1.PUSH
+        document.write("<br><br><b>---------- 1.PUSH ----------</b><br>");
+
+        str=[" AAA "," BBB ", " CCC "];
+
+        str.push(" DDD ");
+        
+        for(let i=0; i<str.length; i++){
+            document.write('<b><br>'+str[i]);        
+        }
+
+        // 2.POP
+        document.write("<br><br><b>---------- 2.POP ----------</b><br>");
+
+        str.pop();
+
+        for(let i=0; i<str.length; i++){
+            document.write('<b><br>'+str[i]);        
+        }
+
+         // 3.SHIFT
+         document.write("<br><br><b>---------- 3.SHIFT ----------</b><br>");
+
+        str.shift();
+
+        for(let i=0; i<str.length; i++){
+            document.write('<b><br>'+str[i]);        
+        }
+
+        // 4.UNSHIFT
+        document.write("<br><br><b>---------- 4.UNSHIFT ----------</b><br>");
+
+        str.unshift('DDD');
+
+        for(let i=0; i<str.length; i++){
+            document.write('<b><br>'+str[i]);        
+        }
+
+        
+        // 5.AFTER UPDATE
+        document.write("<br><br><b>---------- 5.AFTER UPDATE ----------</b><br>");
+
+        str[1]="DAXIT";
+
+        for(let i=0; i<str.length; i++){
+            document.write('<b><br>'+str[i]);        
+        }
+
+          // 6.AFTER DELET
+          document.write("<br><br><b>---------- 6.AFTER DELET ----------</b><br>");
+
+            delete str[1];
+
+            for(let i=0; i<str.length; i++){
+                document.write('<b><br>'+str[i]);        
+            }
+
+        // 7.MULTIPLE ARRAY MERGE
+        document.write("<br><br><b>---------- 7.MERGE ----------</b><br>");
+
+        let str2=["FFF", "GGG"];
+        let str3=["UUU", "PPP"];
+        let str4=str.concat(str2,str3);
+
+        for(let i=0; i<str4.length; i++){
+            document.write('<b><br>'+str4[i]);        
+        }
+
+          // 8.SPLICE
+          document.write("<br><br><b>---------- 8.SPLICE ----------</b><br>");
+
+            str.splice(1,0,"ZZZ")
+
+            for(let i=0; i<str.length; i++){
+                document.write('<b><br>'+str[i]);        
+            }
+
+             // 9.SLICE
+            document.write("<br><br><b>---------- 9.SLICE ----------</b><br>");
+
+            let x=["111", "222", "333", "444", "555"];
+            b=x.slice(0,2);
+
+            for(let i=0; i<b.length; i++){
+                document.write('<b><br>'+b[i]);        
+            }
+
+    
+        
+
+    </script>
+    
+</body>
+</html>
