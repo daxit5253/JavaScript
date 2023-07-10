@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="calc.js"></script>
+</head>
+<body>
+
+<body class="rainbow-background">
+
+    <!-- <h1 style="text-align:center">Calculator App</h1> -->
+
+        <div class="container">
+            <br>
+            <div>
+
+                    <input type='text' id='result' class ='screen' style="text-align: right;">                     
+
+                <div>
+                    <button name="btn1" class="add" value="clr" id="btn1" onclick="getClear()">AC</button>
+                    <button name="btn2" class="add" value="del" id="btn2" onclick="getBack()">Delet</button>
+
+                </div>
+
+                    <div class="keys">
+
+                        <div>
+                            <button name="btn3" value="7" id="btn3" onclick="getval('7')">7</button>
+                            <button name="btn4" value="8" id="btn4" onclick="getval('8')">8</button>
+                            <button name="btn5" value="9" id="btn5" onclick="getval('9')">9</button>
+                            <button name="btn6" value="/" id="btn6" class="yellow" onclick="getval('/')">/</button>      
+                        </div>
+
+                        <div>
+                            <button name="btn7" value="4" id="btn7" onclick="getval('4')">4</button>
+                            <button name="btn8" value="5" id="btn8" onclick="getval('5')">5</button>
+                            <button name="btn9" value="6" id="btn9" onclick="getval('6')">6</button>
+                            <button name="btn10" value="x" style="padding: 26px;" id="btn10" class="yellow" onclick="getval('*')">&times;</button>      
+                        </div>
+
+                        <div>
+                            <button name="btn11" value="1" id="btn11" onclick="getval('1')">1</button>
+                            <button name="btn12" value="2" id="btn12" onclick="getval('2')">2</button>
+                            <button name="btn13" value="3" id="btn13" onclick="getval('3')">3</button>
+                            <button name="btn14" value="-" id="btn14" class="yellow" onclick="getval('-')">-</button>      
+                        </div>
+                            
+                        <div>
+                            <button name="btn15" class="dot"  value="0" id="btn15" onclick="getval('0')">0</button>
+                            <button name="btn16" value="." id="btn16" onclick="getval('.')"><b>.</b></button>
+                            <button name="btn17" value="=" id="btn17" class="blue" onclick="getAns('=')">=</button>
+                            <button name="btn18" value="+" id="btn18" class="yellow" onclick="getval('+')">+</button>      
+                        </div>
+
+                </div> 
+        </div>
+
+    </div>
+
+</body>
+</html>
