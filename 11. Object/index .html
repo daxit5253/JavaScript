@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+
+    <h1>Object</h1>
+
+    <script>
+
+    let a={
+        fname:"Daxit",
+        lname:"Barvaliya",
+        age:"21",
+    };
+
+    // add new element in object //
+
+    a.salary=50000;
+    a['address']="Nikol";
+
+    document.write('First Name is '+a.fname+" "+a.lname+'<br>');
+    document.write('Age is '+a.age+'<br>');
+    document.write('Address is '+a.address+'<br>'); 
+    document.write('Salary is '+a.salary+'<br>');
+
+    // Element Delet karva //
+
+    document.write('<b><h3><br>-----delet Element-----</h3></b><br>');
+    
+    document.write('age is delet<br><br>');
+    
+    delete a.age;
+    for(var x in a){
+        document.write(x+' is '+a[x]+'<br>');
+        
+    }
+
+    // This keyword //
+
+    document.write('<b><h3><br>-----This keyword-----</h3></b><br>');
+
+    let emp = {
+        fname:"Daxit",
+        lname:"Barvaliya",
+        age:"21",
+        salary:"50000",
+        fullname: function(){
+        return this.fname+" "+this.lname
+    },  
+
+    get getsalary(){
+        return this.salary;
+    },
+
+    set setlname(newval){
+        this.lname = newval;
+    },
+        
+    };
+    document.write('FullName is '+emp.fullname());
+
+    document.write('<b><h3><br>----- GETTER , SETTER-----</h3></b><br>');
+
+    document.write('<br>Salary is '+emp.getsalary);
+   
+    emp.setlname="Patel";
+    document.write('<br>Rename is '+emp.fname+' '+emp.lname);
+    
+
+
+    
+
+   
+
+
+
+
+    
+    </script>
+    
+</body>
+</html>
