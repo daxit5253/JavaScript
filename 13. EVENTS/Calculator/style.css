@@ -1,0 +1,18 @@
+.container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.button, .operator{
+    padding: 15px 20px;
+    margin-top: 5px;
+}
+
+.screen{
+    padding: 10px;
+}
+
+.clear{
+    padding: 10px 17px;
+}

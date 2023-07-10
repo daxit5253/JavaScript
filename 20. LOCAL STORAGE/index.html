@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+
+    <form action="#" id="form" name="form">
+
+        <input type="hidden" name="uid" id="uid">
+
+        <label for="">Name:</label>
+        <input type="text" name="uname" id="uname"><br><br>
+
+        <label for="">Age:</label>
+        <input type="text" name="age" id="age"><br><br>
+
+        <label for="">Salary:</label>
+        <input type="text" name="salary" id="salary"><br><br>
+
+
+        <label for="">Gender:</label>
+        <input type="radio" name="gender" id="gender" value="Male">Male
+        <input type="radio" name="gender" id="gender" value="Female">Female<br><br>
+
+        <label for="">Qualification:</label>
+        <input type="checkbox" name="q1" id="c1" value="10th">10th
+        <input type="checkbox" name="q1" id="c2" value="12th">12th
+        <input type="checkbox" name="q1" id="c3" value="bca">BCA
+        <input type="checkbox" name="q1" id="c4" value="bba">BBA
+        <input type="checkbox" name="q1" id="c5" value="bcom">B.COM
+        <br>
+        <input style="margin-left: 97px;" type="checkbox" name="q1" id="c6" value="ba">B.A.
+        <input type="checkbox" name="q1" id="c7" value="phd">PHD
+        <input type="checkbox" name="q1" id="c8" value="mca">MCA
+        <input type="checkbox" name="q1" id="c9" value="mba">MBA
+        <input type="checkbox" name="q1" id="c10" value="mcom">M.COM
+
+        <br><br><br>
+
+        <input type="button" value="Save" name="btn" id="btn">
+
+    </form>
+
+    <br><br>
+
+    <table id="userData" cellpadding="8" border="4">
+
+    </table>
+
+
+
+    <!-- Script -->
+
+    <script>
+        display();
+        document.getElementById("btn").addEventListener("click", function () {
+
+            let name = document.form.uname.value;
+            let age = document.form.age.value;
+            let slr = document.form.salary.value;
+            let id = document.form.uid.value;
+            let gender = document.form.gender.value;
+            let q1 = document.getElementsByName('q1');
+
+            let qual = [];
+
+            for (let j = 0; j < q1.length; j++) {
+                if (q1[j].checked == true) {
+                    qual.push(q1[j].value);
+                }
+            }
+
+            let userDetail = {};
+            let data = {
+                name: name,
+                age: age,
+                salary: slr,
+                gender: gender,
+                qualification: qual
+            }
+
+            let info = JSON.parse(localStorage.getItem("UserInfo"));
+
+            if (info != null) {
+                if (id != '') {
+                    for (let i = 0; i < info.studentInfo.length; i++) {
+                        if (id == i) {
+                            info.studentInfo[i].name = name;
+                            info.studentInfo[i].age = age;
+                            info.studentInfo[i].salary = slr;
+                            info.studentInfo[i].gender = gender;
+                            info.studentInfo[i].qualification = qual;
+                        }
+                    }
+                    localStorage.setItem("UserInfo", JSON.stringify(info));
+                } else {
+                    info.studentInfo.push(data);
+                    localStorage.setItem("UserInfo", JSON.stringify(info));
+                }
+
+            } else {
+                userDetail.studentInfo = [data];
+                localStorage.setItem("UserInfo", JSON.stringify(userDetail));
+            }
+
+            document.form.reset();
+            document.form.uid.value = '';
+            display();
+        });
+
+        function display() {
+
+            let dt = "<tr>";
+            dt += "<th>Name</th>";
+            dt += "<th>Age</th>";
+            dt += "<th>Salary</th>";
+            dt += "<th>Gender</th>";
+            dt += "<th>Qulification</th>";
+            dt += "<th colspan='2' >Action</th>";
+            dt += "</tr>";
+
+            let info = localStorage.getItem("UserInfo");
+
+            if (info != null) {
+                let data = JSON.parse(info);
+                for (let i = 0; i < data.studentInfo.length; i++) {
+                    dt += "<tr>";
+                    dt += "<td>" + data.studentInfo[i].name + "</td>";
+                    dt += "<td>" + data.studentInfo[i].age + "</td>";
+                    dt += "<td>" + data.studentInfo[i].salary + "</td>";
+                    dt += "<td>" + data.studentInfo[i].gender + "</td>";
+                    dt += "<td>" + data.studentInfo[i].qualification + "</td>";
+                    dt += "<td><input type='button' name='edit' id='edit' onclick='editData(" + i + ")' value=Edit </td>"
+                    dt += "<td><input type='button' name='del' id='del' onclick='delData(" + i + ")' value=Delet </td>"
+                    dt += "</tr>";
+                }
+                document.getElementById("userData").innerHTML = dt;
+            }
+        }
+
+        function delData(id) {
+            let info = localStorage.getItem("UserInfo");
+            if (info != '') {
+                let data = JSON.parse(  info);
+                console.log(data);
+                data.studentInfo.splice(id, 1);
+                localStorage.setItem("UserInfo", JSON.stringify(data));
+                display();
+            }
+        }
+        function editData(id) {
+            let info = localStorage.getItem("UserInfo");
+            if (info != null) {
+                let data = JSON.parse(info);
+                for (let i = 0; i < data.studentInfo.length; i++) {
+                    if (id == i) {
+                        document.form.uname.value = data.studentInfo[i].name;
+                        document.form.age.value = data.studentInfo[i].age;
+                        document.form.salary.value = data.studentInfo[i].salary;
+                        document.form.gender.value = data.studentInfo[i].gender;
+
+                        let qData = data.studentInfo(i).qualification;
+                        let q1 = document.getElementsByName('q1');
+
+                        for (let j = 0; j < q1.length; j++) {
+                            if (qData.includes(q1[j].value)) {
+                                q1[j].checked = true;
+                            }
+                        }
+
+                        document.form.uid.value = i;
+                    }
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

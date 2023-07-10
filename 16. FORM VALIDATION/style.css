@@ -1,0 +1,71 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    max-width: 400px;
+    background-color:#bce5f2;
+    padding: 50px;
+}
+
+.title{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.form > input{
+    background-color: #afc9d0;
+    border: none;
+}
+
+.form > label{
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.abc > input{
+    background-color: #afc9d0;
+    border: none;
+    margin: 10px;
+    padding: 7px;
+}
+
+.radio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+
+
+.d-flex{
+    display: flex;
+}
+
+#dob, #number, #email, #pwd, #cpwd{
+    padding: 7px;
+    width:90%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.btn{
+    background-color: #afc9d0;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left:10px
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.btn:hover{
+    background-color: lightgreen;
+    transition: 1s;
+}

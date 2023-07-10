@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Event Format 01</title>
+</head>
+<body>
+
+    <script>
+
+        // 1. Create an Event Using The Event Constructor.
+
+            const e1 = new Event('msgdisp');
+
+        // 2.Event Listener Using addEventListener.
+
+            document.addEventListener('msgdisp', function(e){
+
+                console.log('Massage Display.....');
+                let a=10, b=20
+                let c=a+b;
+                console.log('Addition is '+c);
+
+            });
+
+    </script>
+
+        <!-- // 3. Dispatch -->
+
+        <button type="btn" name="btn1" onclick="document.dispatchEvent(e1);"> Click </button>
+    
+</body>
+</html>

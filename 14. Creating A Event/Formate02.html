@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Event Format 02</title>
+</head>
+<body>
+
+    <script>
+
+        // 01.To Assign Event.
+
+            const e1 = new CustomEvent('msgDisp',{
+                detail:{
+                    name:"Daxit",
+                    surname:"Baravaliya",
+                    age:21
+                }
+            });
+
+        // 02.To Trigger the Event Listener
+
+            document.addEventListener('msgDisp',function(data){
+
+                    console.log("Name is "+data.detail.name);
+                    console.log("Surname is "+data.detail.surname);
+            });
+
+        </script>
+
+            <!-- // 3. Dispatch -->
+
+            <button type="btn" name="btn1" onclick="document.dispatchEvent(e1);"> Click </button>
+  
+</body>
+</html>

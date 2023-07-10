@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT ERRORS</title>
+</head>
+<body>
+
+    <script>
+
+        // ERROR
+
+        try{
+            let age = 17;
+
+            if (age < 18){
+                throw "age must be > 18";
+            }else{
+                document.write('You are Eligible for Vote');
+            }
+            } catch(e){
+                document.write('Eroor msg-------'+e);
+            }
+
+
+        // JAVASCRIPT SCOPE
+
+        let a=10;    // => Global(Public)
+
+        function abc(){
+            let b=25;    // => Local (Private)
+        }
+
+        function xyz(){
+            let ab=25;
+
+            function d(){   // => Block (Limited)
+                ab
+            }
+        }
+        
+        
+
+    </script>
+
+</body>
+</html>

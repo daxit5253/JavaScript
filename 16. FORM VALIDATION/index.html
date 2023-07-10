@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <form action="#" name="myform" class="form" onsubmit="return checkValidData()">
+
+        <h2 class="title">Student Registration Form</h2>
+
+        <label for="">First Name </label><br>
+
+    <div class="d-flex abc">
+        <input type="text" name="uname" id="uname" placeholder="FirstName">
+
+        <input type="text" name="luname" id="luname" placeholder="LastName">
+    </div>
+    <p id="errname" name="errname"></p>
+    <p id="errlname" name="errlname"></p><br>
+
+
+
+    <label for="birthday">Date Of Birth </label><br>
+    <input type="date" id="dob" name="dob">
+    <p id="errdob" name="errdob"></p><br>
+
+        <label for="" class="gender">Gender </label><br>
+        <div class="radio">
+            <p><input type="radio" name="r1" id="rbtn2">Male </p>
+            <p><input type="radio" name="r1" id="rbtn1">Female</p>
+            <p id="errradio" name="errradio"></p><br>
+        </div><br>
+        
+      
+
+        <label for="">Number</label><br>
+        <input type="number" name="number" id="number">
+        <p id="errnumber" name="errnumber"></p><br>
+
+        <label for="">Email</label><br>
+        <input type="email" name="email" id="email">
+        <p id="erremail" name="erremail"></p><br>
+
+        <label for="">Password</label><br>
+        <input type="password" name="pwd" id="pwd">
+        <p id="errpwd" name="errpwd"></p><br>
+
+        <label for="">Confirm Password</label><br>
+        <input type="password" name="cpwd" id="cpwd">
+        <p id="errcpwd" name="errcpwd"></p><br>
+
+    <div class="button">
+        <input type="submit" class="btn"  value="submit" name="btn1">
+        <input type="reset" class="btn" value="Reset">
+    </div>
+
+    </form>
+
+        <script src="index.js"></script>
+    
+    
+
+    
+</body>
+</html>

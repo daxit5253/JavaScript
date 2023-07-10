@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+
+    <p id="demo">Hello</p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+
+
+    <input type="text" name="uname" id="uname">
+    <input type="text" name="uname" id="uname">
+
+    <button name="btn1" id="btn1" onclick="add()">Click</button>
+
+    <button name="btn1" id="btn1" ondblclick="add2()">DoubleClick</button>
+
+    <button name="btn2" id="btn2" onmouseover="add3()">Mouse over</button>
+
+    <button name="btn2" id="btn2" onmouseover="add3()">Mouse over</button>
+
+
+
+
+    <script>
+        function add() {
+            document.getElementById('uname').value="Daxit";
+            document.getElementById('demo').style.color="red";
+            document.getElementById('uname').style.color="green";
+            document.getElementById('demo').innerText="Hello Daxit";
+        }
+
+ 
+        function add3(){
+            document.getElementById('uname').value="Daxit";
+            document.getElementById('demo3').innerText="I am Fine";
+        }
+
+        function add2(){
+            document.getElementById('uname').value="Daxit";
+            document.getElementById('demo2').innerText="How are you?";
+
+        }
+    </script>
+    
+</body>
+</html>
